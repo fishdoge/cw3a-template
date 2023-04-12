@@ -2,7 +2,7 @@ import "../styles/globals.css";
 import "@rainbow-me/rainbowkit/styles.css";
 
 import { getDefaultWallets, RainbowKitProvider } from "@rainbow-me/rainbowkit";
-import { configureChains, createClient, useAccount, WagmiConfig } from "wagmi";
+import { configureChains, createClient, sepolia, useAccount, WagmiConfig } from "wagmi";
 import {
   mainnet,
   polygon,
@@ -28,6 +28,7 @@ const { chains, provider } = configureChains(
     optimismGoerli,
     arbitrum,
     arbitrumGoerli,
+    sepolia
   ],
   [alchemyProvider({ apiKey: process.env.ALCHEMY_API_KEY }), publicProvider()]
 );
